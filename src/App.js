@@ -1,11 +1,13 @@
 import Cards from "./Component/Cards";
-import { React } from 'react';
+import { React} from 'react';
 
 function App() {
-  return ( <div >
-    <Cards />
-  </div>
-  )}
 
+  return (<div >
+    <Cards />
+  
+  </div>
+  )
+}
 
 export default App;

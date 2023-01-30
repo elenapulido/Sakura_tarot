@@ -1,28 +1,37 @@
-import { React } from 'react';
-
+import { render } from "react-dom";
+import { useState, useEffect } from 'react';
 
 function Cards() {
 
-    const url = "https://6388b6e5a4bb27a7f78f96a5.mockapi.io/sakura-cards/";
+    const [cards, setCards] = useState([])
 
-    async function CallApi() {
-        try {
-            const response = await fetch(url);
-            const data = await response.json();
-            console.log (data)
-            return data;
-        } catch (error) {
-            console.log(error);
-        }
-    }
-    CallApi();
-    return (<div >
-        <ul>
-            <li> </li>
-        </ul>
-        <p>SAKURA</p>
-    </div>
-)}
+    useEffect(() => {
+        fetch('https://6388b6e5a4bb27a7f78f96a5.mockapi.io/sakura-cards/')
+            .then((response) => {
+                return response.json()
+            })
+            .then((cards) => {
+                setCards(cards)
+            })
+    }, [])
 
+    return (
+        <div>
+            {cards.map(card => {
+                return (
+                    <tr >
+                        <td>
+                            <img key={card} src={card.sakuraCard} alt={card.englishName}></img>
+                        </td>
+                    </tr>
+                );
+            })}
+        </div>
+    );
+}
 
 export default Cards
+
+
+
+
