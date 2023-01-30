@@ -1,16 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
+import Cards from "./Component/Cards";
+import { React } from 'react';
 
 function App() {
+  return ( <div >
+    <Cards />
+  </div>
+  )}
 
-  const url = "https://6388b6e5a4bb27a7f78f96a5.mockapi.io/sakura-cards/"
-
-  return (
-    <div className="App">
-     
-
-    </div>
-  );
-}
 
 export default App;
