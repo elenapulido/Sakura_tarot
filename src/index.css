@@ -1,10 +1,18 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
 .tarot {
   display: flex;
-
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .cards {
-  margin-right: -15vh;
-  
+  height: 17vh;
+}
 
+.btn-shuffle{
+  text-align: center;
 }
