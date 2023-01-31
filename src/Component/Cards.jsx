@@ -16,15 +16,15 @@ function Cards() {
             })
     }, [])
 
-    
+console.info(cards)
 
     return (
         <div className='tarot'>
-            {random(cards).map((card) => {
-                return(
-                    <img className='cards' id={card.id} key={card.id} src={card[0].sakuraCard} alt={card.englishName}></img>
-                
-            )})}
+            {random(cards).map(card => {
+                return (
+                    <img className='cards' id={card.id} key={card.id} src={card[0].sakuraCard} alt={card[0].englishName}></img>
+                );
+            })}
         </div>
     );
 
