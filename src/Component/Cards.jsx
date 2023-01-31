@@ -1,4 +1,4 @@
-import { render } from "react-dom";
+//import { render } from "react-dom";
 import { useState, useEffect } from 'react';
 
 function Cards() {
@@ -16,19 +16,16 @@ function Cards() {
     }, [])
 
     return (
-        <div>
+        <div className='tarot'>
             {cards.map(card => {
                 return (
-                    <tr >
-                        <td>
-                            <img key={card} src={card.sakuraCard} alt={card.englishName}></img>
-                        </td>
-                    </tr>
+                    <img className='cards' key={card} src={card.sakuraCard} alt={card.englishName}></img>
                 );
             })}
         </div>
     );
 }
+
 
 export default Cards
 
