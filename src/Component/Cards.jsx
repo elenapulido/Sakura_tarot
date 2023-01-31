@@ -1,5 +1,6 @@
 //import { render } from "react-dom";
 import { useState, useEffect } from 'react';
+import random from './Decks';
 
 function Cards() {
 
@@ -15,16 +16,21 @@ function Cards() {
             })
     }, [])
 
+    
+
     return (
         <div className='tarot'>
-            {cards.map(card => {
-                return (
-                    <img className='cards' key={card} src={card.sakuraCard} alt={card.englishName}></img>
-                );
-            })}
+            {random(cards).map((card) => {
+                return(
+                    <img className='cards' id={card.id} key={card.id} src={card[0].sakuraCard} alt={card.englishName}></img>
+                
+            )})}
         </div>
     );
+
+
 }
+
 
 
 export default Cards

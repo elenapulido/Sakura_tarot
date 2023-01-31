@@ -1,20 +1,13 @@
-import Cards from "./Component/Cards";
 
-class cards extends Component {
-    render() {
-      const data = [{cards}]
-      let tarot = [];
-      for (let i = 0; i<data.length; i++){
-        tarot.push(<div>{data[i].card + ", " + data[i].id}</div>)
-      }
-      return <div>
-      {tarot}
-      </div>
+function random(array) {
+    let tarot = [];
+    for (let i = 0; i < 5; i++) {
+        tarot.push(array.splice(Math.floor(Math.random() * array.length), 1));
     }
+    return tarot
+    
 }
 
-function getRandomInt(max) {
-    return Math.round(Math.random() * max) cards: length;
-}
 
-export default Decks
+
+export default random
