@@ -1,23 +1,32 @@
 import Card from "./Component/Card";
-import { React} from 'react';
+import { React } from 'react';
 import { useState, useEffect } from "react";
+import Draw from "./Component/Draw";
 
+
+export let selectItem = []
 
 function App() {
 
-  let [counter,setCounter] = useState(0)
+  let [counter, setCounter] = useState(0)
   const [cards, setCards] = useState([])
-  //const [draw, setDraw]
+  const [buttPast, setButtPast] = useState(false)
+  const [buttPresent, setButtPresent] = useState(false)
+  const [buttFuture, setButtFuture] = useState(false)
+
+
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch ('https://6388b6e5a4bb27a7f78f96a5.mockapi.io/sakura-cards/');
+      const response = await fetch('https://6388b6e5a4bb27a7f78f96a5.mockapi.io/sakura-cards/');
       const cards = await response.json();
       setCards(cards);
     }
-  fetchData()
-    .catch(console.error)
+    fetchData()
+      .catch(console.error)
   }, [])
+
+
 
   const increaseCounter = () => {
     counter++
@@ -30,22 +39,43 @@ function App() {
     setCards(nextList);
   }
 
+  const selectCard = (item) => {
+    console.info(selectItem.length)
+    
+    if (selectItem.length >= 0) {
+      setButtPast(true)
+    }
+    if (selectItem.length >= 1) {
+      setButtPresent(true)
+    }
+    if (selectItem.length >= 2) {
+      setButtFuture(true)
+    }
+    selectItem.push(item)
+
+  }
+
   let cardsList = cards.map((card) =>
-  <Card key={card.id} card={card} increaseCounter={increaseCounter} clickCounter={counter}/>
+    <Card key={card.id} card={card} increaseCounter={increaseCounter} clickCounter={counter} selectCard={selectCard} />
   )
+
+
 
   return (
     <div>
       <div className="tarot">
-      {cardsList}
+        {cardsList}
+      </div>
+
+      <div className="btn-shuffle">
+        <button onClick={shuffleCards}>Shuffle</button>
+
+      </div>
+      <Draw buttFuture={buttFuture} buttPast={buttPast} buttPresent={buttPresent}/>
+      
+
     </div>
 
-    <div className="btn-shuffle">
-      <button onClick={shuffleCards}>Shuffle</button>
-    </div>
-
-  </div>
-  
   )
 }
 
