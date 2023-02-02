@@ -26,6 +26,8 @@ function App() {
     setCards(nextList);
   }
 
+  
+
   return (
     <div>
       <div className="tarot">
