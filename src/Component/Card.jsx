@@ -8,6 +8,7 @@ function Card(props) {
     const showCard = (card) => {
         
         if (selectItem.length < 3 ){
+           
             setDisplayCard(props.card.sakuraCard)
             props.selectCard(card)
         } 
