@@ -16,10 +16,15 @@ body{
 
 .cards {
   margin-top: 2vh;
-  height: 21vh;
+  height: 17vh;
   padding: 1vh;
 }
 
 .btn-shuffle{
   text-align: center;
+}
+
+.buttOn {
+  display: flex;
+
 }

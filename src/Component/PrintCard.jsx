@@ -2,7 +2,7 @@ import React from 'react'
 
 function PrintCard({buttOn, selectCard}) {
     return (
-        <div>
+        <div >
             {
                 buttOn ?
                     <>
