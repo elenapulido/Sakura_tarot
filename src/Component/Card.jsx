@@ -7,7 +7,7 @@ function Card(props) {
     
    return (
     <div className="">
-        <img className="cards" id={props.card.id} key={props.card.id} src={props.card.sakuraCard} alt={props.card.englishName} onClick={printCardName}></img>
+        <img className="cards" id={props.card.id} key={props.card.id} src={props.card.cardsReverse.sakuraReverse} alt={props.card.englishName} onClick={printCardName}></img>
     </div>
    );
 
