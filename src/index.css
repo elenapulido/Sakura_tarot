@@ -16,10 +16,20 @@ body{
 
 .cards {
   margin-top: 2vh;
-  height: 21vh;
+  height: 19vh;
   padding: 1vh;
 }
 
 .btn-shuffle{
   text-align: center;
+}
+
+.box {
+  display: flex;
+  color:white;
+
+
+}
+.text{
+  color: white;
 }

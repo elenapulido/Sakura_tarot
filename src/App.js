@@ -8,7 +8,7 @@ export let selectItem = []
 
 function App() {
 
-  let [counter, setCounter] = useState(0)
+ 
   const [cards, setCards] = useState([])
   const [buttPast, setButtPast] = useState(false)
   const [buttPresent, setButtPresent] = useState(false)
@@ -28,10 +28,7 @@ function App() {
 
 
 
-  const increaseCounter = () => {
-    counter++
-    setCounter(counter)
-  }
+  
 
   const shuffleCards = () => {
     const nextList = [...cards];
@@ -56,7 +53,7 @@ function App() {
   }
 
   let cardsList = cards.map((card) =>
-    <Card key={card.id} card={card} increaseCounter={increaseCounter} clickCounter={counter} selectCard={selectCard} />
+    <Card key={card.id} card={card}  selectCard={selectCard} />
   )
 
 
