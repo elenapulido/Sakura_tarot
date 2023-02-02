@@ -3,6 +3,11 @@
   padding: 0;
 }
 
+body{
+  background-image: url("./img/fondo.jpg");
+  background-size: 100%;
+}
+
 .tarot {
   display: flex;
   flex-wrap: wrap;
@@ -10,7 +15,9 @@
 }
 
 .cards {
-  height: 17vh;
+  margin-top: 2vh;
+  height: 21vh;
+  padding: 1vh;
 }
 
 .btn-shuffle{

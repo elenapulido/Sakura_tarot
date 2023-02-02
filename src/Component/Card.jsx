@@ -1,20 +1,37 @@
+import { useState } from "react";
 
 function Card(props) {
 
-   const printCardName = () => {
-        console.log(props.card.englishName + ":" + props.card.meaning);
-   }
-    
-   return (
-    <div className="">
-        <img className="cards" id={props.card.id} key={props.card.id} src={props.card.sakuraCard} alt={props.card.englishName} onClick={printCardName}></img>
-    </div>
-   );
+    const [displayCard, setDisplayCard] = useState(props.card.cardsReverse.sakuraReverse);
 
+    const showCard = () => {
+        props.increaseCounter()
+        setDisplayCard(props.card.sakuraCard)
+    }
+
+
+    return (
+        <div className="">
+            <img
+                className="cards"
+                key={props.card.id} id={props.card.id} src={displayCard} alt={props.card.englishName}
+                onClick={showCard}>
+            </img>
+
+        </div>
+
+
+    );
 }
 
 
+
+
+
+
+
 export default Card
+
 
 
 
