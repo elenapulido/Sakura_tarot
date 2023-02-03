@@ -1,17 +1,17 @@
 import { useState } from "react";
-import {selectItem} from "../App"
+import { selectItem } from "../App"
 
 function Card(props) {
 
     const [displayCard, setDisplayCard] = useState(props.card.cardsReverse.sakuraReverse);
 
     const showCard = (card) => {
-        
-        if (selectItem.length < 3 ){
-           
+
+        if (selectItem.length < 3) {
+
             setDisplayCard(props.card.sakuraCard)
             props.selectCard(card)
-        } 
+        }
     }
 
 
@@ -20,7 +20,7 @@ function Card(props) {
             <img
                 className="cards"
                 key={props.card.id} id={props.card.id} src={displayCard} alt={props.card.englishName}
-                onClick={()=>showCard(props.card)}>
+                onClick={() => showCard(props.card)}>
             </img>
 
         </div>

@@ -9,19 +9,24 @@ function Draw({ buttPast, buttPresent, buttFuture }) {
 
 
     return (
+        <div>
+            <div className="paragraph">
+                <p>Selecciona tres cartas y conoce tu predicción</p>
+            </div>
+            <div className="box">
 
-        <div className="box">
-            <div className="past">
-                <h3>Pasado</h3>
-                <PrintCard selectCard={pastCard} buttOn={buttPast} />
-            </div>
-            <div className="present">
-                <h3>Presente</h3>
-                <PrintCard selectCard={presentCard} buttOn={buttPresent} />
-            </div>
-            <div className="future">
-                <h3>Futuro</h3>
-                <PrintCard selectCard={futureCard} buttOn={buttFuture} />
+                <div className="past">
+                    <h3 className='tittlePast'>Pasado</h3>
+                    <PrintCard selectCard={pastCard} buttOn={buttPast} />
+                </div>
+                <div className="present">
+                    <h3 className='tittlePresent'>Presente</h3>
+                    <PrintCard selectCard={presentCard} buttOn={buttPresent} />
+                </div>
+                <div className="future">
+                    <h3 className='tittleFuture'>Futuro</h3>
+                    <PrintCard selectCard={futureCard} buttOn={buttFuture} />
+                </div>
             </div>
         </div>
     )

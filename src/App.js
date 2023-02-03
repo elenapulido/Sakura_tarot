@@ -2,19 +2,17 @@ import Card from "./Component/Card";
 import { React } from 'react';
 import { useState, useEffect } from "react";
 import Draw from "./Component/Draw";
+import logo from "./img/logo.png"
 
 
 export let selectItem = []
 
 function App() {
 
- 
   const [cards, setCards] = useState([])
   const [buttPast, setButtPast] = useState(false)
   const [buttPresent, setButtPresent] = useState(false)
   const [buttFuture, setButtFuture] = useState(false)
-
-
 
   useEffect(() => {
     const fetchData = async () => {
@@ -27,18 +25,16 @@ function App() {
   }, [])
 
 
-
-  
-
   const shuffleCards = () => {
     const nextList = [...cards];
     nextList.sort((a, b) => 0.5 - Math.random());
     setCards(nextList);
   }
 
+
   const selectCard = (item) => {
     console.info(selectItem.length)
-    
+
     if (selectItem.length >= 0) {
       setButtPast(true)
     }
@@ -49,32 +45,30 @@ function App() {
       setButtFuture(true)
     }
     selectItem.push(item)
-
   }
 
   let cardsList = cards.map((card) =>
-    <Card key={card.id} card={card}  selectCard={selectCard} />
+    <Card key={card.id} card={card} selectCard={selectCard} />
   )
 
 
-
   return (
+
     <div>
+      <div className="logo" >
+        <img src={logo} alt="" />
+      </div>
       <div className="tarot">
         {cardsList}
       </div>
 
       <div className="btn-shuffle">
-        <button onClick={shuffleCards}>Shuffle</button>
-
+        <button className="shuffle" onClick={shuffleCards}>SHUFFLE</button>
       </div>
-      <Draw buttFuture={buttFuture} buttPast={buttPast} buttPresent={buttPresent}/>
-      
-
+      <Draw buttFuture={buttFuture} buttPast={buttPast} buttPresent={buttPresent} />
     </div>
 
   )
 }
-
 
 export default App;

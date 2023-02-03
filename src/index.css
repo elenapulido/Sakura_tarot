@@ -1,14 +1,22 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
 
-body{
+body {
   background-image: url("./img/fondo.jpg");
   background-size: 100%;
 }
 
+.logo {
+  margin-top: -50vh;
+  margin-right: 10vw;
+  scale: 0.1;
+}
+
+
 .tarot {
+  margin-top: -52vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -16,20 +24,74 @@ body{
 
 .cards {
   margin-top: 2vh;
-  height: 19vh;
-  padding: 1vh;
+  height: 18vh;
+  padding: 0.5vh;
+  transition: all .2s ease-in-out;
+
 }
 
-.btn-shuffle{
+.cards:hover {
+  transform: scale(1.1);
+}
+
+.btn-shuffle {
   text-align: center;
+  color: palevioletred;
+  text-decoration: none;
+}
+
+.shuffle {
+  color: palevioletred;
+  border-color: palevioletred;
+  border-radius: 4vh;
+  width: 8vw;
+  height: 5vh;
+  background-color: black;
+
 }
 
 .box {
   display: flex;
-  color:white;
+  color: palevioletred;
+  justify-content: space-around;
+  font-size: 1.5vh;
+  background-color: black;
+  border-radius: 10vh;
+}
 
+.tittlePast,
+.tittlePresent,
+.tittleFuture {
+  margin-top: 2vh;
+  font-size: 4vh;
+  margin-bottom: 2vh;
 
 }
-.text{
-  color: white;
+
+.present,
+.past,
+.future {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 4vh;
+}
+
+.text {
+  margin-top: 1vh;
+  font-size: 2vh;
+  max-width: 14vw;
+}
+
+.paragraph {
+  margin-top: 3vh;
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  font-size: 2vh;
+  color: palevioletred;
+  padding-top: 2vh;
+
+
+
 }

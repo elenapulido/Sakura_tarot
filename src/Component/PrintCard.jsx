@@ -6,8 +6,8 @@ function PrintCard({buttOn, selectCard}) {
             {
                 buttOn ?
                     <>
-                        <img className="pastCard" key={selectCard.id} id={selectCard.id} src={selectCard.sakuraCard} alt={selectCard.englishName}>
-                        </img>
+                        <img className="pastCard" key={selectCard.id} id={selectCard.id} src={selectCard.sakuraCard} alt={selectCard.englishName}/>
+                        
                         <p className="text" >{selectCard.meaning}</p>
                     </>
                     :
