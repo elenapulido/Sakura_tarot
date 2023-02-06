@@ -5,7 +5,7 @@ Project by PITONISAS SAKURA
 
 [Elena] https://github.com/elenapulido
 
-[Iris] https://github.com/Jeann11#
+[Iris] https://github.com/Jeann11
 
 # REQUIREMENTS
 - Use  Ágiles methodology - Scrum
