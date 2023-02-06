@@ -1,5 +1,5 @@
 # Sakura_tarot
-Project by KWAK_LEGION#
+Project by PITONISAS SAKURA
 
 # TEAM
 
