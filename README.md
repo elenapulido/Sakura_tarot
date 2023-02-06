@@ -8,7 +8,7 @@ Project by KWAK_LEGION#
 [Iris] https://github.com/Jeann11#
 
 # REQUIREMENTS
-- Use  Ágiles metodology - Scrum
+- Use  Ágiles methodology - Scrum
 - Jira - User Story and tasks
 - Responsive
 
