@@ -9,14 +9,14 @@ body {
 }
 
 .logo {
-  margin-top: -50vh;
+  margin-top: -70vh;
   margin-right: 10vw;
   scale: 0.1;
 }
 
 
 .tarot {
-  margin-top: -52vh;
+  margin-top: -70vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -27,7 +27,6 @@ body {
   height: 18vh;
   padding: 0.5vh;
   transition: all .2s ease-in-out;
-
 }
 
 .cards:hover {
@@ -47,7 +46,6 @@ body {
   width: 8vw;
   height: 5vh;
   background-color: black;
-
 }
 
 .box {
@@ -65,7 +63,6 @@ body {
   margin-top: 2vh;
   font-size: 4vh;
   margin-bottom: 2vh;
-
 }
 
 .present,
@@ -91,7 +88,4 @@ body {
   font-size: 2vh;
   color: palevioletred;
   padding-top: 2vh;
-
-
-
 }
